@@ -15,6 +15,9 @@
 		A2D6C15822D3F667001EB5D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C15722D3F667001EB5D1 /* main.m */; };
 		A2D6C16222D3F667001EB5D1 /* mockagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C16122D3F667001EB5D1 /* mockagramTests.m */; };
 		A2D6C16D22D3F667001EB5D1 /* mockagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C16C22D3F667001EB5D1 /* mockagramUITests.m */; };
+		B372231E2EB096E5F026C68C /* Pods_mockagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0C923FD223BD14DD0A975C /* Pods_mockagram.framework */; };
+		D24BA957480AD882231C06AD /* Pods_mockagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968D7A2060A68EC17F6CF607 /* Pods_mockagramUITests.framework */; };
+		F0FFF7BA9A0606A4F45F4448 /* Pods_mockagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0057BA9A46B9F35CD0AC9876 /* Pods_mockagramTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0057BA9A46B9F35CD0AC9876 /* Pods_mockagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mockagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8391628737F370B27E2837E2 /* Pods-mockagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockagramUITests.debug.xcconfig"; path = "Target Support Files/Pods-mockagramUITests/Pods-mockagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		855FB0CC8D8EE99FB7691916 /* Pods-mockagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockagram.release.xcconfig"; path = "Target Support Files/Pods-mockagram/Pods-mockagram.release.xcconfig"; sourceTree = "<group>"; };
+		968D7A2060A68EC17F6CF607 /* Pods_mockagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mockagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D6C14522D3F666001EB5D1 /* mockagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mockagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D6C14822D3F666001EB5D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A2D6C14922D3F666001EB5D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +58,11 @@
 		A2D6C16822D3F667001EB5D1 /* mockagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mockagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D6C16C22D3F667001EB5D1 /* mockagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mockagramUITests.m; sourceTree = "<group>"; };
 		A2D6C16E22D3F667001EB5D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5A803CB7C2BA6D4569463A7 /* Pods-mockagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockagramUITests.release.xcconfig"; path = "Target Support Files/Pods-mockagramUITests/Pods-mockagramUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AA0C923FD223BD14DD0A975C /* Pods_mockagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mockagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDFCAD55FBEDBB28B4DE9B11 /* Pods-mockagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockagramTests.debug.xcconfig"; path = "Target Support Files/Pods-mockagramTests/Pods-mockagramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F64343A4ECC917251B207997 /* Pods-mockagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockagramTests.release.xcconfig"; path = "Target Support Files/Pods-mockagramTests/Pods-mockagramTests.release.xcconfig"; sourceTree = "<group>"; };
+		F6A90444B67BBD7ECDC9A071 /* Pods-mockagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockagram.debug.xcconfig"; path = "Target Support Files/Pods-mockagram/Pods-mockagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B372231E2EB096E5F026C68C /* Pods_mockagram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0FFF7BA9A0606A4F45F4448 /* Pods_mockagramTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D24BA957480AD882231C06AD /* Pods_mockagramUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 				A2D6C16022D3F667001EB5D1 /* mockagramTests */,
 				A2D6C16B22D3F667001EB5D1 /* mockagramUITests */,
 				A2D6C14622D3F666001EB5D1 /* Products */,
+				A72C7789975DF445B99314B9 /* Pods */,
+				BC3DBAD74742F9F6726311B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +149,30 @@
 			path = mockagramUITests;
 			sourceTree = "<group>";
 		};
+		A72C7789975DF445B99314B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6A90444B67BBD7ECDC9A071 /* Pods-mockagram.debug.xcconfig */,
+				855FB0CC8D8EE99FB7691916 /* Pods-mockagram.release.xcconfig */,
+				EDFCAD55FBEDBB28B4DE9B11 /* Pods-mockagramTests.debug.xcconfig */,
+				F64343A4ECC917251B207997 /* Pods-mockagramTests.release.xcconfig */,
+				8391628737F370B27E2837E2 /* Pods-mockagramUITests.debug.xcconfig */,
+				A5A803CB7C2BA6D4569463A7 /* Pods-mockagramUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC3DBAD74742F9F6726311B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA0C923FD223BD14DD0A975C /* Pods_mockagram.framework */,
+				0057BA9A46B9F35CD0AC9876 /* Pods_mockagramTests.framework */,
+				968D7A2060A68EC17F6CF607 /* Pods_mockagramUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2D6C17122D3F667001EB5D1 /* Build configuration list for PBXNativeTarget "mockagram" */;
 			buildPhases = (
+				C733D86A580BAB5DD1F2269B /* [CP] Check Pods Manifest.lock */,
 				A2D6C14122D3F666001EB5D1 /* Sources */,
 				A2D6C14222D3F666001EB5D1 /* Frameworks */,
 				A2D6C14322D3F666001EB5D1 /* Resources */,
+				507939E669651B7E48C3AE9C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2D6C17422D3F667001EB5D1 /* Build configuration list for PBXNativeTarget "mockagramTests" */;
 			buildPhases = (
+				A906DE813326E36C1EC86997 /* [CP] Check Pods Manifest.lock */,
 				A2D6C15922D3F667001EB5D1 /* Sources */,
 				A2D6C15A22D3F667001EB5D1 /* Frameworks */,
 				A2D6C15B22D3F667001EB5D1 /* Resources */,
@@ -174,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2D6C17722D3F667001EB5D1 /* Build configuration list for PBXNativeTarget "mockagramUITests" */;
 			buildPhases = (
+				282C8EB38F92D1D85BC9FFC7 /* [CP] Check Pods Manifest.lock */,
 				A2D6C16422D3F667001EB5D1 /* Sources */,
 				A2D6C16522D3F667001EB5D1 /* Frameworks */,
 				A2D6C16622D3F667001EB5D1 /* Resources */,
@@ -256,6 +301,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		282C8EB38F92D1D85BC9FFC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mockagramUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		507939E669651B7E48C3AE9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mockagram/Pods-mockagram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mockagram/Pods-mockagram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mockagram/Pods-mockagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A906DE813326E36C1EC86997 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mockagramTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C733D86A580BAB5DD1F2269B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mockagram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A2D6C14122D3F666001EB5D1 /* Sources */ = {
@@ -433,9 +564,11 @@
 		};
 		A2D6C17222D3F667001EB5D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6A90444B67BBD7ECDC9A071 /* Pods-mockagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q2PU6GNQZR;
 				INFOPLIST_FILE = mockagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,9 +582,11 @@
 		};
 		A2D6C17322D3F667001EB5D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855FB0CC8D8EE99FB7691916 /* Pods-mockagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q2PU6GNQZR;
 				INFOPLIST_FILE = mockagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -465,6 +600,7 @@
 		};
 		A2D6C17522D3F667001EB5D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDFCAD55FBEDBB28B4DE9B11 /* Pods-mockagramTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -483,6 +619,7 @@
 		};
 		A2D6C17622D3F667001EB5D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64343A4ECC917251B207997 /* Pods-mockagramTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -501,6 +638,7 @@
 		};
 		A2D6C17822D3F667001EB5D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8391628737F370B27E2837E2 /* Pods-mockagramUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = mockagramUITests/Info.plist;
@@ -518,6 +656,7 @@
 		};
 		A2D6C17922D3F667001EB5D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5A803CB7C2BA6D4569463A7 /* Pods-mockagramUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = mockagramUITests/Info.plist;
