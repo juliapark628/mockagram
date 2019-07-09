@@ -36,7 +36,6 @@
             NSLog(@"User log in failed: %@", error.localizedDescription);
         } else {
             [self performSegueWithIdentifier:@"loginSegue" sender:nil];
-            // display view controller that needs to shown after successful login
         }
     }];
 }

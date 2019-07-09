@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2BBF72322D526E00087F7A4 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBF72222D526E00087F7A4 /* ComposeViewController.m */; };
+		A2BBF72622D526E90087F7A4 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBF72522D526E90087F7A4 /* ProfileViewController.m */; };
+		A2BBF72A22D54B9C0087F7A4 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBF72922D54B9C0087F7A4 /* Post.m */; };
 		A2D6C14A22D3F666001EB5D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C14922D3F666001EB5D1 /* AppDelegate.m */; };
 		A2D6C15022D3F666001EB5D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D6C14E22D3F666001EB5D1 /* Main.storyboard */; };
 		A2D6C15222D3F667001EB5D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D6C15122D3F667001EB5D1 /* Assets.xcassets */; };
@@ -44,6 +47,12 @@
 		8391628737F370B27E2837E2 /* Pods-mockagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockagramUITests.debug.xcconfig"; path = "Target Support Files/Pods-mockagramUITests/Pods-mockagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		855FB0CC8D8EE99FB7691916 /* Pods-mockagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockagram.release.xcconfig"; path = "Target Support Files/Pods-mockagram/Pods-mockagram.release.xcconfig"; sourceTree = "<group>"; };
 		968D7A2060A68EC17F6CF607 /* Pods_mockagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mockagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2BBF72122D526E00087F7A4 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		A2BBF72222D526E00087F7A4 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		A2BBF72422D526E90087F7A4 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		A2BBF72522D526E90087F7A4 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		A2BBF72822D54B9C0087F7A4 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		A2BBF72922D54B9C0087F7A4 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		A2D6C14522D3F666001EB5D1 /* mockagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mockagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D6C14822D3F666001EB5D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A2D6C14922D3F666001EB5D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -99,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2BBF72722D54B420087F7A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2BBF72822D54B9C0087F7A4 /* Post.h */,
+				A2BBF72922D54B9C0087F7A4 /* Post.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A2D6C13C22D3F666001EB5D1 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +142,7 @@
 		A2D6C14722D3F666001EB5D1 /* mockagram */ = {
 			isa = PBXGroup;
 			children = (
+				A2BBF72722D54B420087F7A4 /* Models */,
 				A2D6C17B22D4183A001EB5D1 /* Views */,
 				A2D6C17A22D41833001EB5D1 /* View Controllers */,
 				A2D6C14822D3F666001EB5D1 /* AppDelegate.h */,
@@ -164,6 +183,10 @@
 				A2D6C18022D41948001EB5D1 /* NewAccountViewController.m */,
 				A2D6C18222D41B54001EB5D1 /* FeedViewController.h */,
 				A2D6C18322D41B54001EB5D1 /* FeedViewController.m */,
+				A2BBF72122D526E00087F7A4 /* ComposeViewController.h */,
+				A2BBF72222D526E00087F7A4 /* ComposeViewController.m */,
+				A2BBF72422D526E90087F7A4 /* ProfileViewController.h */,
+				A2BBF72522D526E90087F7A4 /* ProfileViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -421,8 +444,11 @@
 				A2D6C15822D3F667001EB5D1 /* main.m in Sources */,
 				A2D6C18422D41B54001EB5D1 /* FeedViewController.m in Sources */,
 				A2D6C14A22D3F666001EB5D1 /* AppDelegate.m in Sources */,
+				A2BBF72322D526E00087F7A4 /* ComposeViewController.m in Sources */,
+				A2BBF72622D526E90087F7A4 /* ProfileViewController.m in Sources */,
 				A2D6C17E22D4184F001EB5D1 /* LoginViewController.m in Sources */,
 				A2D6C18122D41948001EB5D1 /* NewAccountViewController.m in Sources */,
+				A2BBF72A22D54B9C0087F7A4 /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
