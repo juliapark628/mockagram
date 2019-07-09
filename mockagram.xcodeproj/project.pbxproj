@@ -3,18 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A2D6C14A22D3F666001EB5D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C14922D3F666001EB5D1 /* AppDelegate.m */; };
-		A2D6C14D22D3F666001EB5D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C14C22D3F666001EB5D1 /* ViewController.m */; };
 		A2D6C15022D3F666001EB5D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D6C14E22D3F666001EB5D1 /* Main.storyboard */; };
 		A2D6C15222D3F667001EB5D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D6C15122D3F667001EB5D1 /* Assets.xcassets */; };
 		A2D6C15522D3F667001EB5D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D6C15322D3F667001EB5D1 /* LaunchScreen.storyboard */; };
 		A2D6C15822D3F667001EB5D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C15722D3F667001EB5D1 /* main.m */; };
 		A2D6C16222D3F667001EB5D1 /* mockagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C16122D3F667001EB5D1 /* mockagramTests.m */; };
 		A2D6C16D22D3F667001EB5D1 /* mockagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C16C22D3F667001EB5D1 /* mockagramUITests.m */; };
+		A2D6C17E22D4184F001EB5D1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C17D22D4184F001EB5D1 /* LoginViewController.m */; };
+		A2D6C18122D41948001EB5D1 /* NewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C18022D41948001EB5D1 /* NewAccountViewController.m */; };
+		A2D6C18422D41B54001EB5D1 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C18322D41B54001EB5D1 /* FeedViewController.m */; };
 		B372231E2EB096E5F026C68C /* Pods_mockagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0C923FD223BD14DD0A975C /* Pods_mockagram.framework */; };
 		D24BA957480AD882231C06AD /* Pods_mockagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968D7A2060A68EC17F6CF607 /* Pods_mockagramUITests.framework */; };
 		F0FFF7BA9A0606A4F45F4448 /* Pods_mockagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0057BA9A46B9F35CD0AC9876 /* Pods_mockagramTests.framework */; };
@@ -45,8 +47,6 @@
 		A2D6C14522D3F666001EB5D1 /* mockagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mockagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D6C14822D3F666001EB5D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A2D6C14922D3F666001EB5D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A2D6C14B22D3F666001EB5D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A2D6C14C22D3F666001EB5D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A2D6C14F22D3F666001EB5D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2D6C15122D3F667001EB5D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2D6C15422D3F667001EB5D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +58,12 @@
 		A2D6C16822D3F667001EB5D1 /* mockagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mockagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D6C16C22D3F667001EB5D1 /* mockagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mockagramUITests.m; sourceTree = "<group>"; };
 		A2D6C16E22D3F667001EB5D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2D6C17C22D4184F001EB5D1 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A2D6C17D22D4184F001EB5D1 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A2D6C17F22D41948001EB5D1 /* NewAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewAccountViewController.h; sourceTree = "<group>"; };
+		A2D6C18022D41948001EB5D1 /* NewAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewAccountViewController.m; sourceTree = "<group>"; };
+		A2D6C18222D41B54001EB5D1 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		A2D6C18322D41B54001EB5D1 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		A5A803CB7C2BA6D4569463A7 /* Pods-mockagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockagramUITests.release.xcconfig"; path = "Target Support Files/Pods-mockagramUITests/Pods-mockagramUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AA0C923FD223BD14DD0A975C /* Pods_mockagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mockagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFCAD55FBEDBB28B4DE9B11 /* Pods-mockagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockagramTests.debug.xcconfig"; path = "Target Support Files/Pods-mockagramTests/Pods-mockagramTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,10 +124,10 @@
 		A2D6C14722D3F666001EB5D1 /* mockagram */ = {
 			isa = PBXGroup;
 			children = (
+				A2D6C17B22D4183A001EB5D1 /* Views */,
+				A2D6C17A22D41833001EB5D1 /* View Controllers */,
 				A2D6C14822D3F666001EB5D1 /* AppDelegate.h */,
 				A2D6C14922D3F666001EB5D1 /* AppDelegate.m */,
-				A2D6C14B22D3F666001EB5D1 /* ViewController.h */,
-				A2D6C14C22D3F666001EB5D1 /* ViewController.m */,
 				A2D6C14E22D3F666001EB5D1 /* Main.storyboard */,
 				A2D6C15122D3F667001EB5D1 /* Assets.xcassets */,
 				A2D6C15322D3F667001EB5D1 /* LaunchScreen.storyboard */,
@@ -149,6 +155,26 @@
 			path = mockagramUITests;
 			sourceTree = "<group>";
 		};
+		A2D6C17A22D41833001EB5D1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2D6C17C22D4184F001EB5D1 /* LoginViewController.h */,
+				A2D6C17D22D4184F001EB5D1 /* LoginViewController.m */,
+				A2D6C17F22D41948001EB5D1 /* NewAccountViewController.h */,
+				A2D6C18022D41948001EB5D1 /* NewAccountViewController.m */,
+				A2D6C18222D41B54001EB5D1 /* FeedViewController.h */,
+				A2D6C18322D41B54001EB5D1 /* FeedViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A2D6C17B22D4183A001EB5D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A72C7789975DF445B99314B9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +185,6 @@
 				8391628737F370B27E2837E2 /* Pods-mockagramUITests.debug.xcconfig */,
 				A5A803CB7C2BA6D4569463A7 /* Pods-mockagramUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -393,9 +418,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2D6C14D22D3F666001EB5D1 /* ViewController.m in Sources */,
 				A2D6C15822D3F667001EB5D1 /* main.m in Sources */,
+				A2D6C18422D41B54001EB5D1 /* FeedViewController.m in Sources */,
 				A2D6C14A22D3F666001EB5D1 /* AppDelegate.m in Sources */,
+				A2D6C17E22D4184F001EB5D1 /* LoginViewController.m in Sources */,
+				A2D6C18122D41948001EB5D1 /* NewAccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
