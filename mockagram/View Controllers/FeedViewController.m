@@ -7,6 +7,9 @@
 //
 
 #import "FeedViewController.h"
+#import "AppDelegate.h"
+#import "LoginViewController.h"
+#import "Parse/Parse.h"
 
 @interface FeedViewController ()
 
@@ -18,6 +21,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+- (IBAction)logoutButtonClicked:(id)sender {
+    [self logoutUser];
+}
+
+- (void)logoutUser {
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        appDelegate.window.rootViewController = loginViewController;
+    }];
+}
+
+
 
 /*
 #pragma mark - Navigation

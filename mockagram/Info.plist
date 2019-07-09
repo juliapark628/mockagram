@@ -9,11 +9,11 @@
 			<key>mockagram.herokuapp.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
-				<string></string>
+				<true/>
 				<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
-				<string></string>
+				<true/>
 				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-				<string></string>
+				<false/>
 			</dict>
 		</dict>
 	</dict>

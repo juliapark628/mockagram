@@ -24,7 +24,12 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)registerUser {
+- (IBAction)createAccountButtonClicked:(id)sender {
+    [self createAccount];
+
+}
+
+- (void) createAccount {
     // initialize a user object
     PFUser *newUser = [PFUser user];
     
@@ -37,10 +42,12 @@
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
         } else {
+            NSLog(@"Account created!");
             [self dismissViewControllerAnimated:true completion:nil];
         }
     }];
 }
+
 
 /*
 #pragma mark - Navigation

@@ -23,7 +23,11 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)loginUser {
+- (IBAction)loginButtonClicked:(id)sender {
+    [self loginUser];
+}
+
+- (void) loginUser {
     NSString *username = self.usernameField.text;
     NSString *password = self.passwordField.text;
     
@@ -36,6 +40,7 @@
         }
     }];
 }
+
 /*
 #pragma mark - Navigation
 
