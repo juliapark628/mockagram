@@ -10,6 +10,7 @@
 		A2BBF72322D526E00087F7A4 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBF72222D526E00087F7A4 /* ComposeViewController.m */; };
 		A2BBF72622D526E90087F7A4 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBF72522D526E90087F7A4 /* ProfileViewController.m */; };
 		A2BBF72A22D54B9C0087F7A4 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBF72922D54B9C0087F7A4 /* Post.m */; };
+		A2BBF72D22D56B590087F7A4 /* PostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBF72C22D56B590087F7A4 /* PostTableViewCell.m */; };
 		A2D6C14A22D3F666001EB5D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C14922D3F666001EB5D1 /* AppDelegate.m */; };
 		A2D6C15022D3F666001EB5D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D6C14E22D3F666001EB5D1 /* Main.storyboard */; };
 		A2D6C15222D3F667001EB5D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D6C15122D3F667001EB5D1 /* Assets.xcassets */; };
@@ -53,6 +54,8 @@
 		A2BBF72522D526E90087F7A4 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		A2BBF72822D54B9C0087F7A4 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		A2BBF72922D54B9C0087F7A4 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		A2BBF72B22D56B590087F7A4 /* PostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostTableViewCell.h; sourceTree = "<group>"; };
+		A2BBF72C22D56B590087F7A4 /* PostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostTableViewCell.m; sourceTree = "<group>"; };
 		A2D6C14522D3F666001EB5D1 /* mockagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mockagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D6C14822D3F666001EB5D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A2D6C14922D3F666001EB5D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 		A2D6C17B22D4183A001EB5D1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A2BBF72B22D56B590087F7A4 /* PostTableViewCell.h */,
+				A2BBF72C22D56B590087F7A4 /* PostTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D6C15822D3F667001EB5D1 /* main.m in Sources */,
+				A2BBF72D22D56B590087F7A4 /* PostTableViewCell.m in Sources */,
 				A2D6C18422D41B54001EB5D1 /* FeedViewController.m in Sources */,
 				A2D6C14A22D3F666001EB5D1 /* AppDelegate.m in Sources */,
 				A2BBF72322D526E00087F7A4 /* ComposeViewController.m in Sources */,

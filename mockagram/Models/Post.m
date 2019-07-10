@@ -10,6 +10,7 @@
 
 @implementation Post
 
+
 @dynamic postID;
 @dynamic userID;
 @dynamic author;
@@ -18,6 +19,8 @@
 @dynamic likeCount;
 @dynamic commentCount;
 
+
+
 + (nonnull NSString *)parseClassName {
     return @"Post";
 }
@@ -25,6 +28,8 @@
 + (void) postUserImage: ( UIImage * _Nullable )image withCaption: ( NSString * _Nullable )caption withCompletion: (PFBooleanResultBlock  _Nullable)completion {
     
     Post *newPost = [Post new];
+    newPost.userID = [PFUser currentUser].username;
+    
     newPost.image = [self getPFFileFromImage:image];
     newPost.author = [PFUser currentUser];
     newPost.caption = caption;

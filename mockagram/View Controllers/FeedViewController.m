@@ -10,17 +10,90 @@
 #import "AppDelegate.h"
 #import "LoginViewController.h"
 #import "Parse/Parse.h"
+#import "PostTableViewCell.h"
+#import "Post.h"
 
-@interface FeedViewController ()
+@interface FeedViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *feedTableView;
+@property (strong, nonatomic) NSMutableArray* feedPosts;
 
 @end
 
 @implementation FeedViewController
 
+static int MAX_POSTS_IN_FEED = 20;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.feedTableView.dataSource = self;
+    self.feedTableView.delegate = self;
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.feedTableView insertSubview:refreshControl atIndex:0];
+    
+    [self beginRefresh:nil]; // TODO: combined load feed and begin refresh so that endrefresh can be called in completion block
 }
+
+- (void)beginRefresh:(UIRefreshControl * _Nullable)refreshControl {
+    // construct query
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query orderByDescending:@"createdAt"];
+    query.limit = MAX_POSTS_IN_FEED;
+    
+    // fetch data asynchronously
+    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        if (posts != nil) {
+            self.feedPosts = [NSMutableArray arrayWithArray:posts];
+            
+            [self.feedTableView reloadData];
+            
+            [refreshControl endRefreshing];
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if ([self.feedPosts count] < MAX_POSTS_IN_FEED) {
+        return [self.feedPosts count];
+    }
+    else {
+     
+         return MAX_POSTS_IN_FEED;
+    
+     }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostTableViewCell"];
+    
+    Post *currPost = self.feedPosts[indexPath.row];
+    
+    PFFileObject *userImageFile = currPost.image;
+    [userImageFile getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+        if (!error) {
+            cell.photoImageView.image = [UIImage imageWithData:data];
+        }
+        else {
+            NSLog(@"cannot get image from PFFile");
+        }
+    }];
+
+    cell.usernameLabel.text = currPost.userID; // TODO: how to get username string from the author object rather than saving it separately? pointer issues
+    cell.captionLabel.text = currPost.caption;
+
+    
+    //[cell refreshDataAtCell:cell withPost:currPost]; //TODO: move this back to a different function
+    
+    return cell;
+}
+
 
 - (IBAction)logoutButtonClicked:(id)sender {
     [self logoutUser];
