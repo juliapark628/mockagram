@@ -12,6 +12,7 @@
 #import "Parse/Parse.h"
 #import "PostTableViewCell.h"
 #import "Post.h"
+#import "DetailsViewController.h"
 
 @interface FeedViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -111,14 +112,19 @@ static int MAX_POSTS_IN_FEED = 20;
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UITableViewCell *tappedCell = sender;
+    NSIndexPath *indexPath = [self.feedTableView indexPathForCell:tappedCell];
+    
+    DetailsViewController *detailsViewController = [segue destinationViewController];
+    detailsViewController.post = self.feedPosts[indexPath.row];
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
