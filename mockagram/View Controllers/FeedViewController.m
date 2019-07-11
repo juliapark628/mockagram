@@ -56,7 +56,6 @@ static int MAX_POSTS_IN_FEED = 20;
             NSLog(@"%@", error.localizedDescription);
         }
     }];
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -76,7 +75,7 @@ static int MAX_POSTS_IN_FEED = 20;
     
     Post *currPost = self.feedPosts[indexPath.row];
 
-    [cell refreshDataAtCell:cell withPost:currPost]; //TODO: move this back to a different function
+    [cell refreshDataAtCell:cell withPost:currPost];
     
     return cell;
 }
@@ -104,7 +103,7 @@ static int MAX_POSTS_IN_FEED = 20;
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([[segue identifier] isEqualToString:@"detailSegue"]) {
+    if ([[segue identifier] isEqualToString:@"feedDetailSegue"]) {
         UITableViewCell *tappedCell = sender;
         NSIndexPath *indexPath = [self.feedTableView indexPathForCell:tappedCell];
         
