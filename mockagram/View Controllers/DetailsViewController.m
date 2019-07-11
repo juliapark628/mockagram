@@ -8,6 +8,7 @@
 
 #import "DetailsViewController.h"
 #import "Post.h"
+#import "DateTools.h"
 
 @interface DetailsViewController ()
 
@@ -15,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *bottomUsernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateCreatedLabel;
+
 
 @end
 
@@ -35,7 +38,7 @@
     self.topUsernameLabel.text = self.post.userID;
     self.bottomUsernameLabel.text = self.post.userID;
     self.captionLabel.text = self.post.caption;
-    
+    self.dateCreatedLabel.text = [self.post.updatedAt timeAgoSinceNow];
     
     
     // Do any additional setup after loading the view.

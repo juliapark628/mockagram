@@ -222,7 +222,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo4-Q2-MEr">
-                                                <rect key="frame" x="10" y="486" width="59.5" height="20.5"/>
+                                                <rect key="frame" x="10" y="486" width="355" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -252,6 +252,12 @@
                                                     <constraint firstAttribute="width" secondItem="zY5-NG-UHE" secondAttribute="height" multiplier="1:1" id="QKt-aP-J8a"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LR0-5C-MLn">
+                                                <rect key="frame" x="99" y="458.5" width="26.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -260,12 +266,16 @@
                                             <constraint firstItem="Uo4-Q2-MEr" firstAttribute="leading" secondItem="Egr-Rp-xRA" secondAttribute="leading" id="5fp-t1-Ofk"/>
                                             <constraint firstItem="rpf-IT-jkI" firstAttribute="leading" secondItem="gn9-9B-oDv" secondAttribute="trailing" constant="10" id="94b-EH-k3L"/>
                                             <constraint firstAttribute="trailing" secondItem="zY5-NG-UHE" secondAttribute="trailing" id="G4G-65-rB9"/>
+                                            <constraint firstAttribute="trailing" secondItem="Uo4-Q2-MEr" secondAttribute="trailing" constant="10" id="J8Q-0m-hLa"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LR0-5C-MLn" secondAttribute="trailing" constant="10" id="Jp7-6z-vgw"/>
                                             <constraint firstItem="Egr-Rp-xRA" firstAttribute="leading" secondItem="gn9-9B-oDv" secondAttribute="leading" id="M9q-1m-MSO"/>
                                             <constraint firstItem="rpf-IT-jkI" firstAttribute="centerY" secondItem="gn9-9B-oDv" secondAttribute="centerY" id="Ofp-Rd-feD"/>
+                                            <constraint firstItem="LR0-5C-MLn" firstAttribute="leading" secondItem="Egr-Rp-xRA" secondAttribute="trailing" constant="5" id="eOs-eO-ng3"/>
                                             <constraint firstItem="gn9-9B-oDv" firstAttribute="leading" secondItem="2hT-iF-Dax" secondAttribute="leading" constant="10" id="kc2-06-RZ1"/>
                                             <constraint firstItem="zY5-NG-UHE" firstAttribute="leading" secondItem="2hT-iF-Dax" secondAttribute="leading" id="nlu-Mo-7fD"/>
                                             <constraint firstItem="zY5-NG-UHE" firstAttribute="top" secondItem="gn9-9B-oDv" secondAttribute="bottom" constant="10" id="tik-GC-92R"/>
                                             <constraint firstItem="Uo4-Q2-MEr" firstAttribute="top" secondItem="Egr-Rp-xRA" secondAttribute="bottom" constant="10" id="v4W-bh-mmw"/>
+                                            <constraint firstItem="LR0-5C-MLn" firstAttribute="centerY" secondItem="Egr-Rp-xRA" secondAttribute="centerY" id="xwW-QE-zuy"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -291,6 +301,7 @@
                     <connections>
                         <outlet property="bottomUsernameLabel" destination="Egr-Rp-xRA" id="2dk-5H-8wd"/>
                         <outlet property="captionLabel" destination="Uo4-Q2-MEr" id="pcG-mi-HEQ"/>
+                        <outlet property="dateCreatedLabel" destination="LR0-5C-MLn" id="Fez-aK-DWV"/>
                         <outlet property="photoImageView" destination="zY5-NG-UHE" id="5N1-NQ-o38"/>
                         <outlet property="topUsernameLabel" destination="rpf-IT-jkI" id="dOP-36-xxd"/>
                     </connections>
