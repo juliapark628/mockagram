@@ -17,7 +17,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *bottomUsernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateCreatedLabel;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
+@property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
 
+@property (nonatomic) BOOL likedByCurrentUser;
 
 @end
 
@@ -39,10 +42,42 @@
     self.bottomUsernameLabel.text = self.post.userID;
     self.captionLabel.text = self.post.caption;
     self.dateCreatedLabel.text = [self.post.updatedAt timeAgoSinceNow];
+    self.likeCountLabel.text = [NSString stringWithFormat:@"%@", self.post.likeCount];
     
-    
-    // Do any additional setup after loading the view.
+    self.likedByCurrentUser = [self.post.likedUsers containsObject:[PFUser currentUser].username];
+    [self.likeButton setSelected:self.likedByCurrentUser];
 }
+
+
+- (IBAction)likeButtonClicked:(id)sender {
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    if (!self.likedByCurrentUser) {
+        // Retrieve the object by id
+        [query getObjectInBackgroundWithId:self.post.objectId block:^(PFObject *serverPost, NSError *error) {
+            self.post.likeCount = @([self.post.likeCount intValue] + 1);
+            serverPost[@"likeCount"] = self.post.likeCount;
+            [serverPost addUniqueObject:[PFUser currentUser].username forKey:@"likedUsers"];
+            [serverPost saveInBackground];
+            
+            self.likeCountLabel.text = [NSString stringWithFormat:@"%@", self.post.likeCount];
+            [self.likeButton setSelected:YES];
+            self.likedByCurrentUser = true;
+        }];
+    }
+    else {
+        [query getObjectInBackgroundWithId:self.post.objectId block:^(PFObject *serverPost, NSError *error) {
+            self.post.likeCount = @([self.post.likeCount intValue] - 1);
+            serverPost[@"likeCount"] = self.post.likeCount;
+            [serverPost removeObject:[PFUser currentUser].username forKey:@"likedUsers"];
+            [serverPost saveInBackground];
+            
+            self.likeCountLabel.text = [NSString stringWithFormat:@"%@", self.post.likeCount];
+            [self.likeButton setSelected:NO];
+            self.likedByCurrentUser = false;
+        }];
+    }
+}
+
 
 /*
 #pragma mark - Navigation

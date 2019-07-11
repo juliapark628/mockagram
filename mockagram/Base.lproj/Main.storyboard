@@ -222,13 +222,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uo4-Q2-MEr">
-                                                <rect key="frame" x="10" y="486" width="355" height="20.5"/>
+                                                <rect key="frame" x="10" y="510" width="355" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egr-Rp-xRA">
-                                                <rect key="frame" x="10" y="455" width="84" height="21"/>
+                                                <rect key="frame" x="10" y="484" width="84" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -253,28 +253,50 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LR0-5C-MLn">
-                                                <rect key="frame" x="99" y="458.5" width="26.5" height="14.5"/>
+                                                <rect key="frame" x="99" y="487.5" width="26.5" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSJ-BY-YRN">
+                                                <rect key="frame" x="10" y="452" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="DJQ-T4-gS3"/>
+                                                    <constraint firstAttribute="height" constant="25" id="uzh-V8-esR"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="final_unselected_heart"/>
+                                                <state key="selected" image="final_selected_heart"/>
+                                                <connections>
+                                                    <action selector="likeButtonClicked:" destination="cI3-cX-Bcb" eventType="touchUpInside" id="t5Z-uh-eI1"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GF-Yd-UlE">
+                                                <rect key="frame" x="43" y="455.5" width="37" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="gn9-9B-oDv" firstAttribute="top" secondItem="2hT-iF-Dax" secondAttribute="top" constant="10" id="2XR-6u-pxi"/>
-                                            <constraint firstItem="Egr-Rp-xRA" firstAttribute="top" secondItem="zY5-NG-UHE" secondAttribute="bottom" constant="10" id="4RV-uo-ZXe"/>
                                             <constraint firstItem="Uo4-Q2-MEr" firstAttribute="leading" secondItem="Egr-Rp-xRA" secondAttribute="leading" id="5fp-t1-Ofk"/>
                                             <constraint firstItem="rpf-IT-jkI" firstAttribute="leading" secondItem="gn9-9B-oDv" secondAttribute="trailing" constant="10" id="94b-EH-k3L"/>
+                                            <constraint firstItem="uSJ-BY-YRN" firstAttribute="leading" secondItem="gn9-9B-oDv" secondAttribute="leading" id="9cL-JB-A3U"/>
                                             <constraint firstAttribute="trailing" secondItem="zY5-NG-UHE" secondAttribute="trailing" id="G4G-65-rB9"/>
                                             <constraint firstAttribute="trailing" secondItem="Uo4-Q2-MEr" secondAttribute="trailing" constant="10" id="J8Q-0m-hLa"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LR0-5C-MLn" secondAttribute="trailing" constant="10" id="Jp7-6z-vgw"/>
+                                            <constraint firstItem="6GF-Yd-UlE" firstAttribute="centerY" secondItem="uSJ-BY-YRN" secondAttribute="centerY" id="M93-So-Nkc"/>
                                             <constraint firstItem="Egr-Rp-xRA" firstAttribute="leading" secondItem="gn9-9B-oDv" secondAttribute="leading" id="M9q-1m-MSO"/>
                                             <constraint firstItem="rpf-IT-jkI" firstAttribute="centerY" secondItem="gn9-9B-oDv" secondAttribute="centerY" id="Ofp-Rd-feD"/>
+                                            <constraint firstItem="Egr-Rp-xRA" firstAttribute="top" secondItem="uSJ-BY-YRN" secondAttribute="bottom" constant="7" id="XFa-Ky-i3a"/>
                                             <constraint firstItem="LR0-5C-MLn" firstAttribute="leading" secondItem="Egr-Rp-xRA" secondAttribute="trailing" constant="5" id="eOs-eO-ng3"/>
+                                            <constraint firstItem="uSJ-BY-YRN" firstAttribute="top" secondItem="zY5-NG-UHE" secondAttribute="bottom" constant="7" id="f2u-4v-Hoc"/>
+                                            <constraint firstItem="6GF-Yd-UlE" firstAttribute="leading" secondItem="uSJ-BY-YRN" secondAttribute="trailing" constant="8" id="hPS-zs-5Yk"/>
                                             <constraint firstItem="gn9-9B-oDv" firstAttribute="leading" secondItem="2hT-iF-Dax" secondAttribute="leading" constant="10" id="kc2-06-RZ1"/>
                                             <constraint firstItem="zY5-NG-UHE" firstAttribute="leading" secondItem="2hT-iF-Dax" secondAttribute="leading" id="nlu-Mo-7fD"/>
                                             <constraint firstItem="zY5-NG-UHE" firstAttribute="top" secondItem="gn9-9B-oDv" secondAttribute="bottom" constant="10" id="tik-GC-92R"/>
-                                            <constraint firstItem="Uo4-Q2-MEr" firstAttribute="top" secondItem="Egr-Rp-xRA" secondAttribute="bottom" constant="10" id="v4W-bh-mmw"/>
+                                            <constraint firstItem="Uo4-Q2-MEr" firstAttribute="top" secondItem="Egr-Rp-xRA" secondAttribute="bottom" constant="5" id="v4W-bh-mmw"/>
                                             <constraint firstItem="LR0-5C-MLn" firstAttribute="centerY" secondItem="Egr-Rp-xRA" secondAttribute="centerY" id="xwW-QE-zuy"/>
                                         </constraints>
                                     </view>
@@ -302,6 +324,8 @@
                         <outlet property="bottomUsernameLabel" destination="Egr-Rp-xRA" id="2dk-5H-8wd"/>
                         <outlet property="captionLabel" destination="Uo4-Q2-MEr" id="pcG-mi-HEQ"/>
                         <outlet property="dateCreatedLabel" destination="LR0-5C-MLn" id="Fez-aK-DWV"/>
+                        <outlet property="likeButton" destination="uSJ-BY-YRN" id="r7u-TP-UTM"/>
+                        <outlet property="likeCountLabel" destination="6GF-Yd-UlE" id="s8I-HU-ImI"/>
                         <outlet property="photoImageView" destination="zY5-NG-UHE" id="5N1-NQ-o38"/>
                         <outlet property="topUsernameLabel" destination="rpf-IT-jkI" id="dOP-36-xxd"/>
                     </connections>
@@ -553,6 +577,8 @@
     <resources>
         <image name="blue-box-rounded" width="700" height="400"/>
         <image name="feed_tab" width="25" height="25"/>
+        <image name="final_selected_heart" width="96" height="96"/>
+        <image name="final_unselected_heart" width="96" height="96"/>
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="profile_tab" width="25" height="25"/>
