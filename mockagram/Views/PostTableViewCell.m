@@ -7,6 +7,7 @@
 //
 
 #import "PostTableViewCell.h"
+#import "DateTools.h"
 
 @implementation PostTableViewCell
 
@@ -34,6 +35,9 @@
     self.usernameLabel.text = currPost.userID;
     self.topUsernameLabel.text = currPost.userID; 
     self.captionLabel.text = currPost.caption;
+    self.dateCreatedLabel.text = [currPost.updatedAt timeAgoSinceNow];
+    
+    // NSLog(@"date: %@", currPost.updatedAt);
 }
 
 

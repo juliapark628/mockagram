@@ -7,6 +7,7 @@ target 'mockagram' do
 
   # Pods for mockagram
   pod 'Parse'
+  pod 'DateTools'
 
   target 'mockagramTests' do
     inherit! :search_paths
