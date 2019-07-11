@@ -349,29 +349,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpw-Sa-Q4h">
-                                <rect key="frame" x="0.0" y="78" width="375" height="375"/>
+                                <rect key="frame" x="0.0" y="135" width="375" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mWt-rF-f1C">
-                                <rect key="frame" x="16" y="463" width="343" height="30"/>
+                                <rect key="frame" x="16" y="86" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsx-0y-JvM">
-                                <rect key="frame" x="170" y="527" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Post!"/>
-                                <connections>
-                                    <action selector="postButtonClicked:" destination="SBf-P1-0Cq" eventType="touchUpInside" id="n1Z-SH-S2Z"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MQD-dB-R9g"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qXO-it-RDd"/>
+                    <navigationItem key="navigationItem" id="qXO-it-RDd">
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="Ksu-Dm-sy3">
+                            <connections>
+                                <action selector="postBarButtonClicked:" destination="SBf-P1-0Cq" id="hUq-2W-VHS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="captionTextField" destination="mWt-rF-f1C" id="viY-dZ-KvS"/>
                         <outlet property="selectedImageView" destination="fpw-Sa-Q4h" id="S3U-0L-2Tr"/>

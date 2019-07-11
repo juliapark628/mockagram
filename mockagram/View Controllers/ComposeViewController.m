@@ -68,11 +68,12 @@
     return newImage;
 }
 
-- (IBAction)postButtonClicked:(id)sender {
+- (IBAction)postBarButtonClicked:(id)sender {
     [Post postUserImage:self.selectedImage withCaption:self.captionTextField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
 }
+
 
 /*
 #pragma mark - Navigation
