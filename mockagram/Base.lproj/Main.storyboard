@@ -151,7 +151,7 @@
                                             <outlet property="captionLabel" destination="pbG-Gz-Iao" id="GGu-1w-3T4"/>
                                             <outlet property="photoImageView" destination="Ytm-pd-aAk" id="QfV-Xt-EM1"/>
                                             <outlet property="usernameLabel" destination="c1c-Wf-Irg" id="KBo-XM-duV"/>
-                                            <segue destination="cI3-cX-Bcb" kind="show" id="OBP-2t-TOH"/>
+                                            <segue destination="cI3-cX-Bcb" kind="show" identifier="detailSegue" id="OBP-2t-TOH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -168,7 +168,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="insta_camera_btn" id="nod-ld-ZdB">
                             <connections>
-                                <segue destination="lNS-ih-tqv" kind="presentation" id="h2g-dI-qgq"/>
+                                <segue destination="lNS-ih-tqv" kind="presentation" identifier="composeSegue" id="bOT-8p-H5U"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -425,6 +425,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lU-BK-Rtn">
+                                <rect key="frame" x="162" y="617" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign in."/>
+                                <connections>
+                                    <action selector="backToSigninButtonClicked:" destination="bEM-n5-jsw" eventType="touchUpInside" id="BVE-ju-c6u"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRp-kR-Y97">
+                                <rect key="frame" x="100" y="602" width="174" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

@@ -117,13 +117,18 @@ static int MAX_POSTS_IN_FEED = 20;
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    UITableViewCell *tappedCell = sender;
-    NSIndexPath *indexPath = [self.feedTableView indexPathForCell:tappedCell];
     
-    DetailsViewController *detailsViewController = [segue destinationViewController];
-    detailsViewController.post = self.feedPosts[indexPath.row];
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"detailSegue"]) {
+        UITableViewCell *tappedCell = sender;
+        NSIndexPath *indexPath = [self.feedTableView indexPathForCell:tappedCell];
+        
+        DetailsViewController *detailsViewController = [segue destinationViewController];
+        detailsViewController.post = self.feedPosts[indexPath.row];
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
+    }
+    
+
 }
 
 

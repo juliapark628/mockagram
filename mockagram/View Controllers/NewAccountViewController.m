@@ -48,6 +48,10 @@
     }];
 }
 
+- (IBAction)backToSigninButtonClicked:(id)sender {
+    [self dismissViewControllerAnimated:true completion:nil]; 
+}
+
 
 /*
 #pragma mark - Navigation
