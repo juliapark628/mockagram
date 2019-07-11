@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *topUsernameLabel;
 
 
 - (void)refreshDataAtCell:(PostTableViewCell*)cell withPost:(Post*)currPost; //TODO: can we pass in a Post*?

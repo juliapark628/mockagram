@@ -32,6 +32,7 @@
         }
     }];
     self.usernameLabel.text = currPost.userID;
+    self.topUsernameLabel.text = currPost.userID; 
     self.captionLabel.text = currPost.caption;
 }
 

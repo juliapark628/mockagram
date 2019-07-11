@@ -75,22 +75,8 @@ static int MAX_POSTS_IN_FEED = 20;
     PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostTableViewCell"];
     
     Post *currPost = self.feedPosts[indexPath.row];
-    
-    PFFileObject *userImageFile = currPost.image;
-    [userImageFile getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
-        if (!error) {
-            cell.photoImageView.image = [UIImage imageWithData:data];
-        }
-        else {
-            NSLog(@"cannot get image from PFFile");
-        }
-    }];
 
-    cell.usernameLabel.text = currPost.userID; // TODO: how to get username string from the author object rather than saving it separately? pointer issues
-    cell.captionLabel.text = currPost.caption;
-
-    
-    //[cell refreshDataAtCell:cell withPost:currPost]; //TODO: move this back to a different function
+    [cell refreshDataAtCell:cell withPost:currPost]; //TODO: move this back to a different function
     
     return cell;
 }
