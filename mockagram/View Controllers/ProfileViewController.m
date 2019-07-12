@@ -18,8 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePictureImage;
 
-@property (strong, nonatomic) UIImage* profilePicture;
-@property (strong, nonatomic) NSArray* userPosts;
+@property (strong, nonatomic) NSArray *userPosts;
 @property (strong, nonatomic) NSString *currUsername;
 
 @end
@@ -34,6 +33,16 @@
     self.currUsername = [PFUser currentUser].username;
     
     self.usernameLabel.text = self.currUsername;
+    
+    PFFileObject *userProfileImageFile = [PFUser currentUser][@"profilePicture"];
+    [userProfileImageFile getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+        if (!error) {
+            self.profilePictureImage.image = [UIImage imageWithData:data];
+        }
+        else {
+            self.profilePictureImage.image = [UIImage imageNamed:@"image_placeholder"];
+        }
+    }];
     // TODO: create a profilePicture field in PFUser
     // TODO: set image view to the current profile picture if it exists
     // self.profilePicture = [PFUser currentUser].profilePicture;
@@ -100,25 +109,19 @@
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
-    imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+    // comment this out when running on simulator.
+    // imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else {
+        NSLog(@"Camera 🚫 available so we will use photo library instead");
+        imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
 
     [self presentViewController:imagePickerVC animated:YES completion:nil];
-    
-    // TODO: set imageview to class image
-    // TODO: send back to server new profile picture
-    /*
-    PFQuery *query = [PFQuery queryWithClassName:@"GameScore"];
-    
-    // Retrieve the object by id
-    
-    [query getObjectInBackgroundWithId:@"xWMyZ4YEGZ" block:^(PFObject *gameScore, NSError *error) {
-        // Now let's update it with some new data. In this case, only cheatMode and score
-        // will get sent to the cloud. playerName hasn't changed.
-        gameScore[@"cheatMode"] = @YES;
-        gameScore[@"score"] = @1338;
-        [gameScore saveInBackground];
-    }];
-    */
 }
 
 
@@ -127,10 +130,19 @@
     
     // Get the image captured by the UIImagePickerController
     UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
-    UIImage *editedImage = [self resizeImage:originalImage withSize:CGSizeMake(75, 75)];
+    UIImage *editedImage = [self resizeImage:originalImage withSize:CGSizeMake(200, 200)];
     
-    // TODO: set class' image to this edited image
-    self.profilePictureImage.image = [UIImage imageWithCGImage:editedImage.CGImage];
+    NSData *imageData = UIImagePNGRepresentation(editedImage);
+    
+    [PFUser currentUser][@"profilePicture"] = [PFFileObject fileObjectWithName:@"profile.png" data:imageData];
+    [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (!error) {
+            self.profilePictureImage.image = [UIImage imageWithCGImage:editedImage.CGImage];
+        }
+        else {
+            NSLog(@"%@", error);
+        }
+    }];
     
     // Dismiss UIImagePickerController to go back to your original view controller
     [self dismissViewControllerAnimated:YES completion:nil];
