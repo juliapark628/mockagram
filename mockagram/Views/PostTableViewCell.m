@@ -19,20 +19,18 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 - (void)refreshDataAtCell:(PostTableViewCell*)cell withPost:(Post*)currPost {
-    PFUser *postCreator = currPost.author;
-    PFFileObject *userProfileImageFile = postCreator[@"profilePicture"];
+    self.postCreator = currPost.author;
+    PFFileObject *userProfileImageFile = self.postCreator[@"profilePicture"];
     
     [userProfileImageFile getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
         if (!error) {
-            self.profilePhotoImageView.image = [UIImage imageWithData:data];
+            [self.profilePhotoImageViewButton setImage:[UIImage imageWithData:data] forState:UIControlStateNormal];
         }
         else {
-            self.profilePhotoImageView.image = [UIImage imageNamed:@"image_placeholder"];
+            [self.profilePhotoImageViewButton setImage:[UIImage imageNamed:@"image_placeholder"] forState:UIControlStateNormal];
         }
     }];
     
@@ -46,14 +44,32 @@
             NSLog(@"cannot get image from PFFile");
         }
     }];
-    self.usernameLabel.text = currPost.userID;
-    self.topUsernameLabel.text = currPost.userID; 
+    [self.usernameButton setTitle:currPost.userID forState:UIControlStateNormal];
+    [self.bottomUsernameButton setTitle:currPost.userID forState:UIControlStateNormal];
     self.captionLabel.text = currPost.caption;
     self.dateCreatedLabel.text = [currPost.updatedAt timeAgoSinceNow];
     
     // NSLog(@"date: %@", currPost.updatedAt);
 }
 
+- (IBAction)profilePictureClicked:(id)sender {
+    [self goToProfileVC];
+}
+
+- (IBAction)topUsernameClicked:(id)sender {
+    [self goToProfileVC];
+}
+
+- (IBAction)bottomUsernameClicked:(id)sender {
+    [self goToProfileVC];
+}
+
+- (void)goToProfileVC {
+    // FeedViewController.gotoPrfileVC(postCreator);
+    
+    [_delegate launchProfileVC:self.postCreator];
+    
+}
 
 
 @end

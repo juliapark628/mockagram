@@ -11,15 +11,24 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol PostTableViewCellDelegate
+
+-(void)launchProfileVC:(PFUser *)forProfile;
+
+@end
+
 @interface PostTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *profilePhotoImageView;
+@property (weak, nonatomic) IBOutlet UIButton *profilePhotoImageViewButton;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
-@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *usernameButton;
+@property (weak, nonatomic) IBOutlet UIButton *bottomUsernameButton;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
-@property (weak, nonatomic) IBOutlet UILabel *topUsernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateCreatedLabel;
 
+@property (nonatomic) int position;
+@property (nonatomic, weak) id<PostTableViewCellDelegate> delegate;
+@property (nonatomic, weak) PFUser *postCreator;
 
 - (void)refreshDataAtCell:(PostTableViewCell*)cell withPost:(Post*)currPost;
 

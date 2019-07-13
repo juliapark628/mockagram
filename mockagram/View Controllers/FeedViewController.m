@@ -13,8 +13,9 @@
 #import "PostTableViewCell.h"
 #import "Post.h"
 #import "DetailsViewController.h"
+#import "OtherProfileViewController.h"
 
-@interface FeedViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FeedViewController () <UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *feedTableView;
 @property (strong, nonatomic) NSMutableArray* feedPosts;
@@ -41,7 +42,7 @@ static int MAX_POSTS_IN_FEED = 20;
 - (void)beginRefresh:(UIRefreshControl * _Nullable)refreshControl {
     // construct query
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
-    [query includeKey:@"author"]; 
+    [query includeKey:@"author"];
     [query orderByDescending:@"createdAt"];
     query.limit = MAX_POSTS_IN_FEED;
     
@@ -77,8 +78,15 @@ static int MAX_POSTS_IN_FEED = 20;
     Post *currPost = self.feedPosts[indexPath.row];
 
     [cell refreshDataAtCell:cell withPost:currPost];
+    cell.position = (int)indexPath.row;
+    cell.delegate = self;
     
     return cell;
+}
+
+-(void)clickedProfile:(Post *)post position:(NSInteger)position {
+    PFUser* userClicked = post.author;
+    [self performSegueWithIdentifier:@"bottomUsernameSegue" sender:self];
 }
 
 
@@ -112,8 +120,26 @@ static int MAX_POSTS_IN_FEED = 20;
         detailsViewController.post = self.feedPosts[indexPath.row];
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-    }
+    } /*else if ([[segue identifier] isEqualToString:@"bottomUsernameSegue"]) {
+        UITableViewCell *tappedCell = sender;
+        NSIndexPath *indexPath = [self.feedTableView indexPathForCell:tappedCell];
+        
+        OtherProfileViewController *otherProfileViewController = [segue destinationViewController];
+        otherProfileViewController.user = (PFUser *)(self.feedPosts[indexPath.row].author);
+    } */
 }
 
+
+- (void)launchProfileVC:(nonnull PFUser *)forProfile {
+    // instantiate OtherProfileViewController
+    // OtherProfileViewController.profiletoShow = forProfile
+    // present(OtherProfileViewController)
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *navViewController = [storyboard instantiateViewControllerWithIdentifier:@"otherProfileNavViewController"];
+    OtherProfileViewController *otherProfileVC = navViewController.viewControllers[0];
+    otherProfileVC.user = forProfile;
+    [self presentViewController:navViewController animated:YES completion:nil];
+}
 
 @end

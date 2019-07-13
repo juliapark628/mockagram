@@ -13,6 +13,7 @@
 		A2BBF72D22D56B590087F7A4 /* PostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBF72C22D56B590087F7A4 /* PostTableViewCell.m */; };
 		A2BBF77922D6720B0087F7A4 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBF77822D6720B0087F7A4 /* DetailsViewController.m */; };
 		A2BBF77C22D6C1F20087F7A4 /* UserPostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BBF77B22D6C1F20087F7A4 /* UserPostCollectionViewCell.m */; };
+		A2C54B7822D966F50046DC1D /* OtherProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C54B7722D966F50046DC1D /* OtherProfileViewController.m */; };
 		A2D6C14A22D3F666001EB5D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D6C14922D3F666001EB5D1 /* AppDelegate.m */; };
 		A2D6C15022D3F666001EB5D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D6C14E22D3F666001EB5D1 /* Main.storyboard */; };
 		A2D6C15222D3F667001EB5D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D6C15122D3F667001EB5D1 /* Assets.xcassets */; };
@@ -62,6 +63,8 @@
 		A2BBF77822D6720B0087F7A4 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		A2BBF77A22D6C1F20087F7A4 /* UserPostCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserPostCollectionViewCell.h; sourceTree = "<group>"; };
 		A2BBF77B22D6C1F20087F7A4 /* UserPostCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserPostCollectionViewCell.m; sourceTree = "<group>"; };
+		A2C54B7622D966F50046DC1D /* OtherProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherProfileViewController.h; sourceTree = "<group>"; };
+		A2C54B7722D966F50046DC1D /* OtherProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherProfileViewController.m; sourceTree = "<group>"; };
 		A2D6C14522D3F666001EB5D1 /* mockagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mockagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D6C14822D3F666001EB5D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A2D6C14922D3F666001EB5D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -198,6 +201,8 @@
 				A2BBF72522D526E90087F7A4 /* ProfileViewController.m */,
 				A2BBF77722D6720B0087F7A4 /* DetailsViewController.h */,
 				A2BBF77822D6720B0087F7A4 /* DetailsViewController.m */,
+				A2C54B7622D966F50046DC1D /* OtherProfileViewController.h */,
+				A2C54B7722D966F50046DC1D /* OtherProfileViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 				A2BBF72D22D56B590087F7A4 /* PostTableViewCell.m in Sources */,
 				A2D6C18422D41B54001EB5D1 /* FeedViewController.m in Sources */,
 				A2D6C14A22D3F666001EB5D1 /* AppDelegate.m in Sources */,
+				A2C54B7822D966F50046DC1D /* OtherProfileViewController.m in Sources */,
 				A2BBF72322D526E00087F7A4 /* ComposeViewController.m in Sources */,
 				A2BBF77C22D6C1F20087F7A4 /* UserPostCollectionViewCell.m in Sources */,
 				A2BBF72622D526E90087F7A4 /* ProfileViewController.m in Sources */,
