@@ -28,7 +28,7 @@ The following **optional** features are implemented:
 - User Profiles:
 - [x] Allow the logged in user to add a profile photo
 - [x] Display the profile photo with each post
-- [ ] Tapping on a post's username or profile photo goes to that user's profile page
+- [x] Tapping on a post's username or profile photo goes to that user's profile page
 - [ ] User can comment on a post and see all comments for each post in the post details screen.
 - [x] User can like a post and see number of likes for each post in the post details screen.
 - [ ] Implement a custom camera view.
@@ -39,16 +39,16 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. I would like to 
-2.
+1. How can I implement a comment section at the bottom of the phone screen that will push up and stay above the keyboard when I click on it? I worked around this by putting my caption section at the top of the phone so it won't be covered, but most apps have their comment section below a post and still allow a user to see what they're typing.
+2. What changes would have to be made in order to make a User subclass of PFUser the same way we did with Post and PFObject? 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/XwkUgMIcGf.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with [Recordit](http://recordit.co).
 
 ## Credits
 
