@@ -2,7 +2,7 @@
 
 **Mockagram** is a photo sharing app using Parse as its backend.
 
-Time spent: **X** hours spent in total
+Time spent: **26** hours spent in total
 
 ## User Stories
 
@@ -27,7 +27,7 @@ The following **optional** features are implemented:
 - [x] After the user submits a new post, show a progress HUD while the post is being uploaded to Parse
 - User Profiles:
 - [x] Allow the logged in user to add a profile photo
-- [ ] Display the profile photo with each post
+- [x] Display the profile photo with each post
 - [ ] Tapping on a post's username or profile photo goes to that user's profile page
 - [ ] User can comment on a post and see all comments for each post in the post details screen.
 - [x] User can like a post and see number of likes for each post in the post details screen.
@@ -39,7 +39,7 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
+1. I would like to 
 2.
 
 ## Video Walkthrough
@@ -60,6 +60,8 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+The biggest challenge was keeping track of all the view controllers and segues and making sure that they didn't get tangled up in each other. For example, a table view cell like a post in the feed view controllers had multiple segues to different controllers (detail view vs other user profile), and it was important to load the navigation controller rather than a view controller directly in order to have the bar at the bottom. 
 
 ## License
 
