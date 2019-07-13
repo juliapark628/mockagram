@@ -84,10 +84,6 @@ static int MAX_POSTS_IN_FEED = 20;
     return cell;
 }
 
--(void)clickedProfile:(Post *)post position:(NSInteger)position {
-    PFUser* userClicked = post.author;
-    [self performSegueWithIdentifier:@"bottomUsernameSegue" sender:self];
-}
 
 
 - (IBAction)logoutButtonClicked:(id)sender {
@@ -118,15 +114,7 @@ static int MAX_POSTS_IN_FEED = 20;
         
         DetailsViewController *detailsViewController = [segue destinationViewController];
         detailsViewController.post = self.feedPosts[indexPath.row];
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    } /*else if ([[segue identifier] isEqualToString:@"bottomUsernameSegue"]) {
-        UITableViewCell *tappedCell = sender;
-        NSIndexPath *indexPath = [self.feedTableView indexPathForCell:tappedCell];
-        
-        OtherProfileViewController *otherProfileViewController = [segue destinationViewController];
-        otherProfileViewController.user = (PFUser *)(self.feedPosts[indexPath.row].author);
-    } */
+    }
 }
 
 
