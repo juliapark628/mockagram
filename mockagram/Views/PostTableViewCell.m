@@ -8,6 +8,7 @@
 
 #import "PostTableViewCell.h"
 #import "DateTools.h"
+#import "Parse/Parse.h"
 
 @implementation PostTableViewCell
 
@@ -23,6 +24,19 @@
 }
 
 - (void)refreshDataAtCell:(PostTableViewCell*)cell withPost:(Post*)currPost {
+    PFUser *postCreator = currPost.author;
+    PFFileObject *userProfileImageFile = postCreator[@"profilePicture"];
+    
+    [userProfileImageFile getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+        if (!error) {
+            self.profilePhotoImageView.image = [UIImage imageWithData:data];
+        }
+        else {
+            self.profilePhotoImageView.image = [UIImage imageNamed:@"image_placeholder"];
+        }
+    }];
+    
+    
     PFFileObject *userImageFile = currPost.image;
     [userImageFile getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
         if (!error) {

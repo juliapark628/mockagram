@@ -43,10 +43,7 @@
             self.profilePictureImage.image = [UIImage imageNamed:@"image_placeholder"];
         }
     }];
-    // TODO: create a profilePicture field in PFUser
-    // TODO: set image view to the current profile picture if it exists
-    // self.profilePicture = [PFUser currentUser].profilePicture;
-    
+
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
     [self.userPostsCollectionView insertSubview:refreshControl atIndex:0];

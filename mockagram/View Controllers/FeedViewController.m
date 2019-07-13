@@ -41,6 +41,7 @@ static int MAX_POSTS_IN_FEED = 20;
 - (void)beginRefresh:(UIRefreshControl * _Nullable)refreshControl {
     // construct query
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query includeKey:@"author"]; 
     [query orderByDescending:@"createdAt"];
     query.limit = MAX_POSTS_IN_FEED;
     
