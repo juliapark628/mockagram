@@ -12,6 +12,9 @@
 
 @interface DetailsViewController ()
 
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *profilePictureImageView;
 @property (weak, nonatomic) IBOutlet UILabel *topUsernameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *bottomUsernameLabel;
@@ -28,6 +31,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    PFUser *postCreator = self.post.author;
+    PFFileObject *userProfileImageFile = postCreator[@"profilePicture"];
+    
+    [userProfileImageFile getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+        if (!error) {
+            self.profilePictureImageView.image = [UIImage imageWithData:data];
+        }
+        else {
+            self.profilePictureImageView.image = [UIImage imageNamed:@"image_placeholder"];
+        }
+    }];
+    
     
     PFFileObject *userImageFile = self.post.image;
     [userImageFile getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {

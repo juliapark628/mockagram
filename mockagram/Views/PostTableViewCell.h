@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *dateCreatedLabel;
 
 
-- (void)refreshDataAtCell:(PostTableViewCell*)cell withPost:(Post*)currPost; //TODO: can we pass in a Post*?
+- (void)refreshDataAtCell:(PostTableViewCell*)cell withPost:(Post*)currPost;
 
 @end
 
