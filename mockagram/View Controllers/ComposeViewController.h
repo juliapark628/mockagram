@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ComposeViewController : UIViewController 
+@protocol ComposeViewControllerDelegate
+
+- (void)beginRefresh:(UIRefreshControl * _Nullable)refreshControl;
+
+@end
+
+@interface ComposeViewController : UIViewController
+
+@property (nonatomic, weak) id<ComposeViewControllerDelegate> delegate; 
 
 @end
 

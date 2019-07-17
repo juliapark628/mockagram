@@ -14,8 +14,9 @@
 #import "Post.h"
 #import "DetailsViewController.h"
 #import "OtherProfileViewController.h"
+#import "ComposeViewController.h"
 
-@interface FeedViewController () <UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate>
+@interface FeedViewController () <UITableViewDataSource, UITableViewDelegate, PostTableViewCellDelegate, ComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *feedTableView;
 @property (strong, nonatomic) NSMutableArray* feedPosts;
@@ -108,12 +109,18 @@ static int MAX_POSTS_IN_FEED = 20;
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    
     if ([[segue identifier] isEqualToString:@"feedDetailSegue"]) {
         UITableViewCell *tappedCell = sender;
         NSIndexPath *indexPath = [self.feedTableView indexPathForCell:tappedCell];
         
         DetailsViewController *detailsViewController = [segue destinationViewController];
         detailsViewController.post = self.feedPosts[indexPath.row];
+    } else if ([[segue identifier] isEqualToString:@"composeSegue"]) {
+        
+        UINavigationController *navigationController = [segue destinationViewController];
+        ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
+        composeController.delegate = self;
     }
 }
 

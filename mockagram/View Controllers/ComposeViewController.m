@@ -72,8 +72,14 @@
 - (IBAction)postBarButtonClicked:(id)sender {
     [MBProgressHUD showHUDAddedTo:self.view animated:true];
     [Post postUserImage:self.selectedImage withCaption:self.captionTextField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-        [MBProgressHUD hideHUDForView:self.view animated:true]; 
+        if (error) {
+            NSLog(@"Error composing Pos: %@", error.localizedDescription);
+        }
+        else {
+            [self.delegate beginRefresh:nil];
+            [self dismissViewControllerAnimated:YES completion:nil];
+            [MBProgressHUD hideHUDForView:self.view animated:true];
+        }
     }];
 }
 
