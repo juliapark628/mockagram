@@ -562,11 +562,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yi0-FW-5aR">
+                                <rect key="frame" x="235" y="539" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take a Photo"/>
+                                <connections>
+                                    <action selector="takePhotoButtonClicked:" destination="SBf-P1-0Cq" eventType="touchUpInside" id="sQ5-gp-yd6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfn-N2-ao5">
+                                <rect key="frame" x="30" y="539" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Choose from library"/>
+                                <connections>
+                                    <action selector="choosePhotoButtonClicked:" destination="SBf-P1-0Cq" eventType="touchUpInside" id="ahA-Vw-dNF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MQD-dB-R9g"/>
                     </view>
                     <navigationItem key="navigationItem" id="qXO-it-RDd">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Gci-p2-fvA">
+                            <connections>
+                                <action selector="cancelBarButtonClicked:" destination="SBf-P1-0Cq" id="VNg-CS-fYz"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Post" id="Ksu-Dm-sy3">
                             <connections>
                                 <action selector="postBarButtonClicked:" destination="SBf-P1-0Cq" id="hUq-2W-VHS"/>

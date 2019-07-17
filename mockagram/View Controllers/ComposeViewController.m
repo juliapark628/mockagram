@@ -22,7 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self automaticallySelectImageSource];
+}
+
+- (void)automaticallySelectImageSource {
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
@@ -38,9 +41,43 @@
     }
     
     [self presentViewController:imagePickerVC animated:YES completion:nil];
-    
 }
 
+- (void) attemptToSetImageSourceToCamera {
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
+    
+    imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:imagePickerVC animated:YES completion:nil];
+    }
+    else {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No Camera" message:@"There is no camera." preferredStyle:(UIAlertControllerStyleAlert)];
+        
+        // try again by refreshing
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        }];
+        
+        // add the refresh action to the alert controller
+        [alert addAction:cancelAction];
+        
+        [self presentViewController:alert animated:YES completion:^{
+            // do nothing
+        }];
+    }
+}
+
+- (void) setImageSourceToLibrary {
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
+    
+    imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+}
 
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
@@ -69,6 +106,16 @@
     return newImage;
 }
 
+- (IBAction)choosePhotoButtonClicked:(id)sender {
+    [self setImageSourceToLibrary];
+}
+
+- (IBAction)takePhotoButtonClicked:(id)sender {
+    [self attemptToSetImageSourceToCamera];
+}
+
+
+
 - (IBAction)postBarButtonClicked:(id)sender {
     [MBProgressHUD showHUDAddedTo:self.view animated:true];
     [Post postUserImage:self.selectedImage withCaption:self.captionTextField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
@@ -82,6 +129,11 @@
         }
     }];
 }
+
+- (IBAction)cancelBarButtonClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 
 /*
